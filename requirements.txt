@@ -1,0 +1,5 @@
+qiskit
+jupyter
+sympy
+matplotlib
+pylatexenc
