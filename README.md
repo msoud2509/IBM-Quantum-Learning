@@ -1,0 +1,2 @@
+# IBM Quantum Learning
+This repository contains Jupyter notebooks with the Qiskit implementations of the concepts covered in the course series, [Quantum Information & Computation](https://quantum.cloud.ibm.com/learning/en) by John Watrous.
