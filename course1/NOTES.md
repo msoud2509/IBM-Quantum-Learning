@@ -27,3 +27,23 @@
         - can be used to tell if the original state was plus or minus state
     - applying unitary operation twice gets you the pauli x gate, which transforms |0⟩ into |1⟩ and |1⟩ into |0⟩
 
+## Multiple Systems
+- **Classical state**
+    - Classical state set of (X,Y) is the cartesian product, every single combo
+        - dictionary ordered (like in python), left is more significant than right
+    - statistical independence: the probability of (x,y) is the product of the probabilities of x and y
+    - tensor product is representation of statistical indendence in matrix form
+        - it is essentially all possible combinations of elements of two vectors multiplied together in one big column vector
+        - property: it is bilinear, and scalars float freely
+    - measurements of probabilistic states: if you just measure the first system, need to do conditional probability to get the probability of the second system
+    - the tensor product of any number of stochastic matrices is also a stochastic matrix
+- **Quantum state**
+    - tensor product of quantum state vecotrs are also quantum state vectors, the resulting vector representing independence between the original vector systems (tensor product is a quantum state)
+    - if a quantum state is not a producrt state, it is an entangled state (cannot be written as a tensor product of two quantum states)
+    - bell basis: 4 entanled states of two qubits, basis for entire two qubit state space
+    - measuring a combination of systems is the same as measuring each system separately,
+    - when you measure just one system, the other system is somewhat collapsed (collapses into a single vector)
+    combined action of two or more unitary operations is the tensor product of the two or more unitary operations, which is also a unitary operation
+
+    
+
