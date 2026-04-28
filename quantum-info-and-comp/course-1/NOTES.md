@@ -39,11 +39,55 @@
     - the tensor product of any number of stochastic matrices is also a stochastic matrix
 - **Quantum state**
     - tensor product of quantum state vecotrs are also quantum state vectors, the resulting vector representing independence between the original vector systems (tensor product is a quantum state)
-    - if a quantum state is not a producrt state, it is an entangled state (cannot be written as a tensor product of two quantum states)
+    - if a quantum state is not a producrt state, it is an entangled state (cannot be written as a tensor product of two quantum states), quick way to check for entangled with 2 qubits is if ad != bc
     - bell basis: 4 entanled states of two qubits, basis for entire two qubit state space
     - measuring a combination of systems is the same as measuring each system separately,
     - when you measure just one system, the other system is somewhat collapsed (collapses into a single vector)
     combined action of two or more unitary operations is the tensor product of the two or more unitary operations, which is also a unitary operation
+
+## Quantum Circuits
+- circuits are essentially just models of computation
+- sequence of operations (time goes left to right, acyclic) applied to a quantum state
+- wires carry information, gates represent ops
+    - in quantum circuits specifically, wires represent qubits, and gates represent unitary operations and measurements
+- ops in circuit are opposite in order to how you multiply the matrices (remember matrix mult rules)
+- ket+ and ket- are an orthonormal basis for the 2-dim space corresponding to a single qubit
+    - bell basis is an orthonormal basis for the 4 dimensional space corresponding to 2 qubits
+- a square matrix is called a 'projection' if both are true:
+    1. it equals its conjugate transpose
+    2. it equals its square (A = AA)
+- every projective measurement can be implemented using unitary ops and standard basis measurements
+- Global Phase: if two quantum state vectors differ by complex number multiple, then they differ by a 'global phase'
+    - since quantum state vectors have euclidean norm of 1, that meanst that this complex number has abs of 1
+    - this means taht tow quantum state vectors that differ by a global phase are completely indistinguishable and are considered equivalent
+- Relative phase: if you just change the sign of one of the components of the ket0 or ket1, these are distinguishable
+- non-cloning thrm: there is no unitary operation to get a copy of an arbritrary quantum state vector
+- Discriminating: it is only possible to perfectly discrimate phi and psi if they are orthogonal quantum state
+
+## Entanglement in Action
+- an entangled state can be viewed as one e-bit
+- **Quantum Teleportation**
+    - protocol to send quantum information (only uses entanglement and classical communication to send info)
+    - no cloning theorem: once qubit has been sent, sender no longer has it
+    - important that no information about the qubit info being sent can be measured (ie in the example prob is 1/4 for every possibility of 2 qubits)
+
+- **Superdense Coding**
+    - holevo's thrm: two classical bits cannot be transmitted by a single qubit alone (need to use e-bits)
+    - a gate seemingly acting on a single qubit that makes up an entangled state will actually modify the entire e-bit
+        - remember that entangled qubits don't have individual identities
+    - in superdense coding, the reciever can derive the two classical bits that are being sent based on the resulting bell state
+
+- **The CHSH Game**
+    - nonlocal game, two cooperative players that cannot communicate with each other
+    - how game is defined = how referee is defined
+    - in CHSH game, referee sends out questions
+        - a question is 2 bits, and are chosen uniformly at random
+        - players respond with their own bits, and the players win if the exclusive or of their answer bits equals the logical AND of the question bits
+    - with the nature of the rules here, the players cannot simply use a function of the inputs (deterministic strategy) to guarantee a win (think about why)
+    - probabilistic strategy doesn't do any better, as probabilistic strategies are essentially just randomly choosing deterministic strategies
+
+
+
 
     
 
