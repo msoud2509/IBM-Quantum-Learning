@@ -10,8 +10,7 @@ This repo covers the following courses:
 **NOTE**: Notes and Qiskit code are provided in the notebooks, some material from the IBM courses may be left out (for example, much of the classical information sections will not be included), and there may be some extra python code not in the courses, to see the original course material, check out the above link.
 
 ### Remarks on the code in the notebooks
-- While we generally order qubits in big-endian order, qiskit does little-endian order, so for example in $|01\rangle$, the first qubit is $|1\rangle$ and the second qubit is $|0\rangle$. This is important for example when demonstrating [controlled-unitary operations](quantum-info-and-comp/course-1/2-multiple-systems/5-unitary-operations.ipynb), and in some other places.
-
+- While we generally order qubits in big-endian order, qiskit circuits specifically does little-endian order, so for example in $|01\rangle$, the first qubit (topmost in circuit) is $|1\rangle$ and the second qubit (bottommost in circuit) is $|0\rangle$. This is important to know whenever we utilize gates from `qiskit.circuit.library`, for example in the demonstration of the [C-NOT gate in the quantum circuits notebook](quantum-info-and-comp/course-1/3-quantum-circuits/1-quantum-circuits.ipynb).
 ## Setup to run the notebooks
 1. Run the below from the root of this repo (only tested for WSL):
 ```bash
